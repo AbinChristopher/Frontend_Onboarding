@@ -1,5 +1,5 @@
 import React, { useState, useEffect } from 'react';
-import { Button, Form } from 'react-bootstrap';
+import { Button, Form, Input } from 'semantic-ui-react';
 import { useDispatch } from 'react-redux';
 import { createProduct, updateProduct } from '../redux/productSlice';
 
@@ -18,7 +18,7 @@ const ProductForm = ({ product, onSave }) => {
     const handleSubmit = async (e) => {
         e.preventDefault();
 
-        const productData = { name, price: parseFloat(price)};
+        const productData = { name, price: parseFloat(price) };
 
         try {
             if (product) {
@@ -26,7 +26,7 @@ const ProductForm = ({ product, onSave }) => {
             } else {
                 await dispatch(createProduct(productData));
             }
-            onSave(); 
+            onSave(); // Callback to parent after saving the product
         } catch (error) {
             console.error('Error saving product:', error);
         }
@@ -34,20 +34,20 @@ const ProductForm = ({ product, onSave }) => {
 
     return (
         <Form onSubmit={handleSubmit}>
-            <Form.Group className="mb-3">
-                <Form.Label>Name</Form.Label>
-                <Form.Control
+            <Form.Field>
+                <label>Name</label>
+                <Input
                     type="text"
                     placeholder="Enter product name"
                     value={name}
                     onChange={(e) => setName(e.target.value)}
                     required
                 />
-            </Form.Group>
+            </Form.Field>
 
-            <Form.Group className="mb-3">
-                <Form.Label>Price</Form.Label>
-                <Form.Control
+            <Form.Field>
+                <label>Price</label>
+                <Input
                     type="number"
                     step="0.01"
                     placeholder="Enter price"
@@ -55,9 +55,9 @@ const ProductForm = ({ product, onSave }) => {
                     onChange={(e) => setPrice(e.target.value)}
                     required
                 />
-            </Form.Group>
+            </Form.Field>
 
-            <Button variant="primary" type="submit">
+            <Button primary type="submit">
                 {product ? 'Update Product' : 'Create Product'}
             </Button>
         </Form>

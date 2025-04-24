@@ -1,5 +1,5 @@
 import React, { useState, useEffect } from 'react';
-import { Button, Form } from 'react-bootstrap';
+import { Form, Button } from 'semantic-ui-react';
 import { useDispatch } from 'react-redux';
 import { createStore, updateStore } from '../redux/storeSlice';
 
@@ -26,7 +26,7 @@ const StoreForm = ({ store, onSave }) => {
             } else {
                 await dispatch(createStore(storeData));
             }
-            onSave(); 
+            onSave();
         } catch (error) {
             console.error('Error saving store:', error);
         }
@@ -34,29 +34,25 @@ const StoreForm = ({ store, onSave }) => {
 
     return (
         <Form onSubmit={handleSubmit}>
-            <Form.Group className="mb-3">
-                <Form.Label>Name</Form.Label>
-                <Form.Control
-                    type="text"
+            <Form.Field required>
+                <label>Name</label>
+                <Form.Input
                     placeholder="Enter store name"
                     value={name}
                     onChange={(e) => setName(e.target.value)}
-                    required
                 />
-            </Form.Group>
+            </Form.Field>
 
-            <Form.Group className="mb-3">
-                <Form.Label>Address</Form.Label>
-                <Form.Control
-                    type="text"
+            <Form.Field required>
+                <label>Address</label>
+                <Form.Input
                     placeholder="Enter store address"
                     value={address}
                     onChange={(e) => setAddress(e.target.value)}
-                    required
                 />
-            </Form.Group>
+            </Form.Field>
 
-            <Button variant="primary" type="submit">
+            <Button type="submit" primary>
                 {store ? 'Update Store' : 'Create Store'}
             </Button>
         </Form>
