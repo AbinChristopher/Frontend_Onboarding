@@ -26,18 +26,15 @@ const SaleForm = ({ sale, onSave, customers = [], products = [], stores = [] }) 
 
         try {
             if (sale) {
-                // Update sale
                 await dispatch(updateSale({ ...saleData, id: sale.id }));
             } else {
-                // Create sale
                 await dispatch(createSale(saleData));
-                // Reset form after create
+                // Optional: reset form after create
                 setDateSold('');
                 setCustomerId('');
                 setProductId('');
                 setStoreId('');
             }
-            // Notify parent component after save
             onSave();
         } catch (error) {
             console.error('Error saving sale:', error);

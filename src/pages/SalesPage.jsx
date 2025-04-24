@@ -39,7 +39,7 @@ const SalesPage = () => {
     const handleSave = () => {
         setShowModal(false);
         setSelectedSale(null);
-        dispatch(fetchSales()); // Refetch sales after saving
+        dispatch(fetchSales()); 
     };
 
     const handleCancel = () => {
@@ -47,7 +47,7 @@ const SalesPage = () => {
         setSelectedSale(null);
     };
 
-    // Combined loading and error states
+    
     const isLoading = loading || customersLoading || productsLoading || storesLoading;
     const hasError = error || customersError || productsError || storesError;
 
@@ -75,7 +75,7 @@ const SalesPage = () => {
                     customers={customers || []}
                     products={products || []}
                     stores={stores || []}
-                    onCancel={handleCancel}  // Pass cancel handler to close the modal
+                    onCancel={handleCancel}  
                 />
             )}
         </div>

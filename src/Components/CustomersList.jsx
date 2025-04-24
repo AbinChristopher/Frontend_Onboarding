@@ -1,9 +1,9 @@
 import React, { useState } from 'react';
 import { useDispatch, useSelector } from 'react-redux';
 import { deleteCustomer } from '../redux/customersSlice';
-import { FiEdit, FiTrash } from 'react-icons/fi'; // Icons for better UI
+import { FiEdit, FiTrash } from 'react-icons/fi'; 
 
-// Modal Component
+
 const Modal = ({ message, onConfirm, onCancel }) => {
     return (
         <div className="modal-overlay">
@@ -26,22 +26,21 @@ const CustomerList = ({ onEdit }) => {
     const [showModal, setShowModal] = useState(false);
     const [selectedCustomerId, setSelectedCustomerId] = useState(null);
 
-    // Handle delete with confirmation modal
+   
     const handleDeleteClick = (id) => {
         setSelectedCustomerId(id);
         setShowModal(true);
     };
 
-    // Confirm deletion
+  
     const handleConfirmDelete = () => {
         dispatch(deleteCustomer(selectedCustomerId));
-        setShowModal(false); // Hide modal after deletion
+        setShowModal(false); 
     };
 
-    // Cancel deletion
     const handleCancelDelete = () => {
-        setShowModal(false); // Close the modal
-        setSelectedCustomerId(null); // Clear selected customer
+        setShowModal(false); 
+        setSelectedCustomerId(null); 
     };
 
     if (loading) {
@@ -76,7 +75,7 @@ const CustomerList = ({ onEdit }) => {
                 </tbody>
             </table>
 
-            {/* Show modal if it's open */}
+            
             {showModal && (
                 <Modal
                     message="Are you sure you want to delete this customer?"

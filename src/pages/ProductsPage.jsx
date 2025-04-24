@@ -1,7 +1,7 @@
 import React, { useEffect, useState } from 'react';
 import { useDispatch, useSelector } from 'react-redux';
 import { fetchProducts, updateProduct } from '../redux/productSlice';
-import './ProductsPage.css'; // Optional styling
+import './ProductsPage.css';
 import ProductList from '../Components/ProductList';
 import ProductForm from '../Components/ProductForm';
 
@@ -30,7 +30,8 @@ const ProductsPage = () => {
 
     const handleSave = () => {
         setShowForm(false);
-        setEditingProduct(null); // Close the form after save
+        setEditingProduct(null);
+        dispatch(fetchProducts()); 
     };
 
     if (loading) return <div className="loading">Loading products...</div>;

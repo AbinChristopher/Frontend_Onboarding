@@ -26,7 +26,7 @@ const StoreForm = ({ store, onSave }) => {
             } else {
                 await dispatch(createStore(storeData));
             }
-            onSave(); // Close form after save
+            onSave(); 
         } catch (error) {
             console.error('Error saving store:', error);
         }

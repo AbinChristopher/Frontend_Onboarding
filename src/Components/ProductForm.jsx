@@ -26,7 +26,7 @@ const ProductForm = ({ product, onSave }) => {
             } else {
                 await dispatch(createProduct(productData));
             }
-            onSave(); // Close modal and refresh
+            onSave(); 
         } catch (error) {
             console.error('Error saving product:', error);
         }

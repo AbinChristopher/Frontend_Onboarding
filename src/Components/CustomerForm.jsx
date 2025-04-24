@@ -1,14 +1,14 @@
 import React, { useState, useEffect } from 'react';
 import { Button, Form } from 'react-bootstrap';
 import { useDispatch } from 'react-redux';
-import { createCustomer, updateCustomer } from '../redux/customersSlice'; // Redux actions
+import { createCustomer, updateCustomer } from '../redux/customersSlice'; 
 
 const CustomerForm = ({ customer, onSave }) => {
     const [name, setName] = useState('');
     const [address, setAddress] = useState('');
     const dispatch = useDispatch();
 
-    // Pre-fill form for editing
+   
     useEffect(() => {
         if (customer) {
             setName(customer.name);
@@ -23,13 +23,13 @@ const CustomerForm = ({ customer, onSave }) => {
 
         try {
             if (customer) {
-                // Dispatch updateCustomer action to Redux
+             
                 await dispatch(updateCustomer({ ...customerData, id: customer.id }));
             } else {
-                // Dispatch createCustomer action to Redux
+               
                 await dispatch(createCustomer(customerData));
             }
-            onSave(); // Close modal and refresh data after save
+            onSave(); 
         } catch (error) {
             console.error('Error saving customer:', error);
         }

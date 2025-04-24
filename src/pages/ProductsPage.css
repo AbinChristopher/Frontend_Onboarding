@@ -1,4 +1,4 @@
-/* General Styles */
+
 body {
     font-family: Arial, sans-serif;
     background-color: #f4f4f4;
@@ -26,7 +26,7 @@ p {
     color: #555;
 }
 
-/* Table Styles */
+
 .product-table {
     width: 100%;
     border-collapse: collapse;
@@ -55,7 +55,7 @@ p {
         background: #e2e6ea;
     }
 
-/* Add new product button */
+
 .add-new-product {
     padding: 10px 20px;
     font-size: 16px;
@@ -71,13 +71,11 @@ p {
         background-color: #0056b3;
     }
 
-/* Button container */
 .button-container {
     display: flex;
     gap: 10px;
 }
 
-/* Buttons */
 .edit-button, .delete-button {
     padding: 8px 12px;
     border: none;
@@ -90,7 +88,7 @@ p {
     transition: background 0.3s ease;
 }
 
-/* Edit button */
+
 .edit-button {
     background: #007bff;
     color: white;
@@ -100,7 +98,6 @@ p {
         background: #0056b3;
     }
 
-/* Delete button */
 .delete-button {
     background: #dc3545;
     color: white;
@@ -110,7 +107,7 @@ p {
         background: #b52a37;
     }
 
-/* Form for editing product */
+
 form {
     margin-top: 20px;
 }
@@ -164,7 +161,7 @@ form {
                 background: #999;
             }
 
-/* Modal Styles */
+
 .modal-overlay {
     position: fixed;
     top: 0;
@@ -197,7 +194,7 @@ form {
     font-size: 14px;
 }
 
-/* Confirm Button */
+
 .confirm-button {
     background-color: #d4edda;
     color: #155724;
@@ -208,7 +205,6 @@ form {
         background-color: #c3e6cb;
     }
 
-/* Cancel Button */
 .cancel-button {
     background-color: #f8d7da;
     color: #721c24;
