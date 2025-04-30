@@ -1,5 +1,6 @@
 import { Component } from 'react';
 import { Container } from 'reactstrap';
+import 'semantic-ui-css/semantic.min.css';
 import { NavMenu } from './components/navmenu/NavMenu';
 
 export class Layout extends Component {

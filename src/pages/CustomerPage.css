@@ -1,6 +1,6 @@
 body {
 }
-/* Main Content */
+
 .main-content {
     padding: 20px;
 }
@@ -15,7 +15,6 @@ p {
     color: #555;
 }
 
-/* Main container for Customer, Store, Sales, and Product pages */
 .container {
     width: 90%;
     max-width: 1000px;
@@ -26,7 +25,7 @@ p {
     box-shadow: 0px 4px 10px rgba(0, 0, 0, 0.1);
 }
 
-/* Modern table styling */
+
 .customer-table,
 .store-table,
 .sales-table,
@@ -38,7 +37,6 @@ p {
     box-shadow: 0px 4px 10px rgba(0, 0, 0, 0.1);
 }
 
-    /* Table headers */
     .customer-table thead,
     .store-table thead,
     .sales-table thead,
@@ -60,7 +58,6 @@ p {
         border-bottom: 1px solid #ddd;
     }
 
-    /* Zebra striping for better readability */
     .customer-table tbody tr:nth-child(even),
     .store-table tbody tr:nth-child(even),
     .sales-table tbody tr:nth-child(even),
@@ -68,7 +65,6 @@ p {
         background: #f9f9f9;
     }
 
-/* Button container */
 .button-container {
     display: flex;
     gap: 10px;
@@ -77,19 +73,19 @@ p {
 .add-new-customer {
     padding: 10px 20px;
     font-size: 16px;
-    background-color: #28a745; /* Green background for "Add Customer" */
+    background-color: #28a745;
     color: white;
     border: none;
     cursor: pointer;
     margin: 20px 0;
-    border-radius: 5px; /* Rounded corners */
+    border-radius: 5px; 
 }
 
     .add-new-customer:hover {
-        background-color: #218838; /* Darker green on hover */
+        background-color: #218838; 
     }
 
-/* Buttons */
+
 .edit-button, .delete-button, .add-button {
     padding: 8px 12px;
     border: none;
@@ -102,7 +98,7 @@ p {
     transition: background 0.3s ease;
 }
 
-/* Edit button */
+
 .edit-button {
     background: #007bff;
     color: white;
@@ -112,7 +108,7 @@ p {
         background: #0056b3;
     }
 
-/* Delete button */
+
 .delete-button {
     background: #dc3545;
     color: white;
@@ -122,7 +118,7 @@ p {
         background: #b52a37;
     }
 
-/* Add button for Products, Sales, and Store */
+
 .add-button {
     background: #28a745;
     color: white;
@@ -132,14 +128,14 @@ p {
         background: #218838;
     }
 
-/* Style for the Modal */
+
 .modal-overlay {
     position: fixed;
     top: 0;
     left: 0;
     right: 0;
     bottom: 0;
-    background: rgba(0, 0, 0, 0.5); /* Semi-transparent black background */
+    background: rgba(0, 0, 0, 0.5);
     display: flex;
     justify-content: center;
     align-items: center;
@@ -190,7 +186,6 @@ p {
         background-color: #999;
     }
 
-/* Animation for Modal appearance */
 @keyframes fadeIn {
     0% {
         opacity: 0;
