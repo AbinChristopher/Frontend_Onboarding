@@ -1,7 +1,7 @@
 import { createSlice, createAsyncThunk } from '@reduxjs/toolkit';
 import axios from 'axios';
 
-// Thunks for async actions
+
 export const fetchSales = createAsyncThunk('sales/fetchSales', async () => {
     const response = await axios.get('https://localhost:7113/api/sales');
     return response.data;
@@ -46,18 +46,17 @@ const salesSlice = createSlice({
                 state.error = action.error.message;
             })
             .addCase(createSale.fulfilled, (state, action) => {
-                // Immediately add the new sale to the state
+               
                 state.sales.push(action.payload);
             })
             .addCase(updateSale.fulfilled, (state, action) => {
-                // Update the sale in the state immediately after the update
+             
                 const index = state.sales.findIndex((s) => s.id === action.payload.id);
                 if (index !== -1) {
                     state.sales[index] = action.payload;
                 }
             })
             .addCase(deleteSale.fulfilled, (state, action) => {
-                // Remove the deleted sale from the state
                 state.sales = state.sales.filter((s) => s.id !== action.payload);
             });
     },
