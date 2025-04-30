@@ -1,20 +1,32 @@
-import { Link } from 'react-router-dom';
+import React from 'react';
+import { Menu, Container } from 'semantic-ui-react';
+import { NavLink } from 'react-router-dom';
 import './NavMenu.css';
 
-function NavMenu() {
+const NavMenu = () => {
     return (
-        <nav className="navbar">
-            <div className="navbar-container">
-                <ul>
-                    <li><Link to="/">Home</Link></li>
-                    <li><Link to="/customers">Customers</Link></li>
-                    <li><Link to="/store">Store</Link></li>
-                    <li><Link to="/sales">Sales</Link></li>
-                    <li><Link to="/products">Products</Link></li>
-                </ul>
-            </div>
-        </nav>
+        <div className="navbar">
+            <Container className="navbar-container">
+                <Menu secondary>
+                    <Menu.Item as={NavLink} to="/" exact className="navlink">
+                        Home
+                    </Menu.Item>
+                    <Menu.Item as={NavLink} to="/customers" className="navlink">
+                        Customers
+                    </Menu.Item>
+                    <Menu.Item as={NavLink} to="/store" className="navlink">
+                        Stores
+                    </Menu.Item>
+                    <Menu.Item as={NavLink} to="/sales" className="navlink">
+                        Sales
+                    </Menu.Item>
+                    <Menu.Item as={NavLink} to="/products" className="navlink">
+                        Products
+                    </Menu.Item>
+                </Menu>
+            </Container>
+        </div>
     );
-}
+};
 
 export default NavMenu;

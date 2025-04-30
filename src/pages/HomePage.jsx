@@ -25,7 +25,7 @@ function HomePage() {
             <div className="text-center mb-5">
                 <h1 className="display-4 text-primary fw-bold">Business Dashboard</h1>
                 <p className="lead text-muted">
-                    Monitor performance, manage resources, and keep your business organized all in one place.
+                    Monitor performance, manage resources, and keep your business organizedall in one place.
                 </p>
             </div>
 

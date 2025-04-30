@@ -23,18 +23,23 @@
     }
 }
 
-.text-center h1 {
-    font-size: 3.5rem;
-    font-weight: bold;
-    color: #007bff;
-    margin-bottom: 20px;
+.text-center {
+    text-align: center;
+    margin-top: 40px;
 }
 
-.text-center p {
-    font-size: 1.25rem;
-    color: #6c757d;
-    margin-bottom: 30px;
-}
+    .text-center h1 {
+        font-size: 3.5rem;
+        font-weight: bold;
+        color: #007bff;
+        margin-bottom: 20px;
+    }
+
+    .text-center p {
+        font-size: 1.25rem;
+        color: #6c757d;
+        margin-bottom: 10px;
+    }
 
 .card {
     border-radius: 10px;
