@@ -3,7 +3,7 @@ import { useDispatch, useSelector } from 'react-redux';
 import { deleteStore } from '../redux/storeSlice';
 import { FiEdit, FiTrash } from 'react-icons/fi';
 
-// Modal Component (same as in CustomerList)
+
 const Modal = ({ message, onConfirm, onCancel }) => {
     return (
         <div className="modal-overlay">

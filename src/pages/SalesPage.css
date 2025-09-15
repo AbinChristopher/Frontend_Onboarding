@@ -4,7 +4,7 @@ body {
     margin: 0;
     padding: 0;
 }
-/* Basic styles for the sale container */
+
 .container {
     width: 90%;
     max-width: 1000px;
@@ -15,7 +15,6 @@ body {
     box-shadow: 0px 4px 10px rgba(0, 0, 0, 0.1);
 }
 
-/* Style for the table */
 .sale-table {
     width: 100%;
     border-collapse: collapse;
@@ -29,23 +28,23 @@ body {
     .sale-table thead {
         background: #4CAF50;
         color: white;
-        text-align: left; /* Left-align table header */
+        text-align: left;
     }
 
-    /* Table headers */
+    
     .sale-table th {
         padding: 12px 15px;
         border-bottom: 1px solid #ddd;
     }
 
-    /* Table rows */
+    
     .sale-table td {
         padding: 12px 15px;
         border-bottom: 1px solid #ddd;
-        text-align: left; /* Left-align table content */
+        text-align: left; 
     }
 
-    /* Hover effect for table rows */
+    
     .sale-table tr:hover {
         background: #e2e6ea;
     }
@@ -54,7 +53,7 @@ body {
         background: #f9f9f9;
     }
 
-/* Add new product button */
+
 .add-new-sale {
     padding: 10px 20px;
     font-size: 16px;
@@ -64,24 +63,24 @@ body {
     cursor: pointer;
     margin: 20px 0;
     border-radius: 5px;
-    margin-left: 20px; /* Align with content */
+    margin-left: 20px; 
 }
 
     .add-new-sale:hover {
         background-color: #0056b3;
     }
 
-/* Button container */
+
 .button-container {
     display: flex;
     gap: 10px;
-    justify-content: center; /* Center buttons */
+    justify-content: center; 
     margin-top: 20px;
 }
 
-/* Buttons */
+
 .edit-button, .delete-button {
-    padding: 8px 16px; /* Consistent padding */
+    padding: 8px 16px; 
     border: none;
     border-radius: 5px;
     cursor: pointer;
@@ -91,20 +90,20 @@ body {
     gap: 5px;
     transition: background 0.3s ease;
 }
-/* Buttons */
+
 .edit-button, .delete-button {
-    padding: 6px 12px; /* Reduced padding */
+    padding: 6px 12px; 
     border: none;
     border-radius: 5px;
     cursor: pointer;
-    font-size: 14px; /* Consistent font size */
+    font-size: 14px; 
     display: flex;
     align-items: center;
     gap: 5px;
     transition: background 0.3s ease;
 }
 
-/* Edit button */
+
 .edit-button {
     background: #007bff;
     color: white;
@@ -114,7 +113,7 @@ body {
         background: #0056b3;
     }
 
-/* Delete button */
+
 .delete-button {
     background: #dc3545;
     color: white;
@@ -123,7 +122,7 @@ body {
     .delete-button:hover {
         background: #b52a37;
     }
-/* Modal Styles */
+
 .modal-overlay {
     position: fixed;
     top: 0;

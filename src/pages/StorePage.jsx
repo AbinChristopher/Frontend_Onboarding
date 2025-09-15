@@ -30,7 +30,7 @@ const StorePage = () => {
 
     const handleSave = () => {
         setShowForm(false);
-        setEditingStore(null); // Close the form after save
+        setEditingStore(null); 
     };
 
     if (loading) return <div className="loading">Loading stores...</div>;

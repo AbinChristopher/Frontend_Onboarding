@@ -12,22 +12,21 @@ const CustomerPage = () => {
     const error = useSelector(state => state.customers.error);
 
     const [editingCustomer, setEditingCustomer] = useState(null);
-    const [isAddingCustomer, setIsAddingCustomer] = useState(false); // Manage adding new customer state
+    const [isAddingCustomer, setIsAddingCustomer] = useState(false); 
     const [updatedName, setUpdatedName] = useState('');
     const [updatedAddress, setUpdatedAddress] = useState('');
 
     useEffect(() => {
-        dispatch(fetchCustomers()); // Fetch customers on component mount
+        dispatch(fetchCustomers()); 
     }, [dispatch]);
 
-    // Handle customer edit
+    
     const handleEdit = (customer) => {
         setEditingCustomer(customer);
         setUpdatedName(customer.name);
         setUpdatedAddress(customer.address);
     };
 
-    // Handle form submission for updating customer
     const handleUpdate = (e) => {
         e.preventDefault();
 
@@ -39,19 +38,19 @@ const CustomerPage = () => {
             };
 
             dispatch(updateCustomer(updatedCustomer)).then(() => {
-                dispatch(fetchCustomers()); // Refresh customers list
+                dispatch(fetchCustomers()); 
             });
 
-            setEditingCustomer(null); // Clear editing state
+            setEditingCustomer(null); 
         }
     };
 
     const handleAddCustomer = () => {
-        setIsAddingCustomer(true); // Show add customer form
+        setIsAddingCustomer(true); 
     };
 
     const handleCloseForm = () => {
-        setIsAddingCustomer(false); // Hide form after customer added
+        setIsAddingCustomer(false); 
         setUpdatedName('');
         setUpdatedAddress('');
     };
@@ -62,14 +61,13 @@ const CustomerPage = () => {
     return (
         <div>
             <h1>Customer List</h1>
-            {/* Add customer button with specific class */}
             <button className="add-new-customer" onClick={handleAddCustomer}>
                 Add Customer
             </button>
 
             <CustomerList customers={customers} onEdit={handleEdit} />
 
-            {/* Edit Form */}
+        
             {editingCustomer && (
                 <form onSubmit={handleUpdate}>
                     <h2>Edit Customer</h2>
@@ -96,11 +94,11 @@ const CustomerPage = () => {
                 </form>
             )}
 
-            {/* Add Customer Form */}
+           
             {isAddingCustomer && (
                 <CustomerForm
-                    customer={null} // No existing customer for adding new one
-                    onSave={handleCloseForm} // Close form after saving
+                    customer={null} 
+                    onSave={handleCloseForm} 
                 />
             )}
         </div>

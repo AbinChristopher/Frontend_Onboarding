@@ -1,7 +1,7 @@
 import { createSlice, createAsyncThunk } from '@reduxjs/toolkit';
 import axios from 'axios';
 
-// Thunks for asynchronous actions
+
 
 // Fetch customers
 export const fetchCustomers = createAsyncThunk('customers/fetchCustomers', async () => {
@@ -27,14 +27,14 @@ export const deleteCustomer = createAsyncThunk('customers/deleteCustomer', async
     return customerId;
 });
 
-// Initial state
+
 const initialState = {
     customers: [],
     loading: false,
     error: null,
 };
 
-// Slice
+
 const customersSlice = createSlice({
     name: 'customers',
     initialState,

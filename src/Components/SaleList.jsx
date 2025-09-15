@@ -4,7 +4,7 @@ import { deleteSale } from '../redux/salesSlice';
 import { FiEdit, FiTrash } from 'react-icons/fi';
 import '../pages/SalesPage.css'
 
-// Reusable confirmation modal
+
 const Modal = ({ message, onConfirm, onCancel }) => (
     <div className="modal-overlay">
         <div className="modal-content">
